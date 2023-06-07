@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from .utils import DataMixin
-from .models import Product, Order
+from .models import Product
 from django.views.generic import ListView, View, CreateView
 from .forms import CategoryFilterForm
 from django.contrib import messages
-
+from .forms import CategoryFilterForm, RegisterForm
 # Create your views here.
 class Home(DataMixin, View):
     model = Product
