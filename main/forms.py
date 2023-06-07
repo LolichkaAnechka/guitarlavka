@@ -17,6 +17,7 @@ class CategoryFilterForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super(CategoryFilterForm, self).__init__(*args, **kwargs)
+
         self.fields['categories'].queryset = Categories.objects.all()
 
 
@@ -40,3 +41,5 @@ class RegisterForm(UserCreationForm):
             'password1': forms.PasswordInput(attrs={'class': 'form-input'}),
             'password2': forms.PasswordInput(attrs={'class': 'form-input'}),
         }
+
+        self.fields['categories'].queryset = Categories.objects.all()
